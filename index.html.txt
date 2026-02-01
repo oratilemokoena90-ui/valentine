@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine, Keesha?</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f9dede;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Arial", sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      color: #d64545;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 160px;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 60px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background: #4caf50;
+      color: white;
+      margin-right: 10px;
+    }
+
+    #noBtn {
+      background: #f44336;
+      color: white;
+      position: absolute;
+    }
+
+    .love {
+      font-size: 24px;
+      color: #d64545;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Will you be my Valentine, <strong>Keesha</strong>? 💘</h1>
+
+    <!-- Cute character -->
+    <img src="https://i.imgur.com/6XK6YxM.png" alt="cute cat" />
+
+    <div class="buttons">
+      <button id="yesBtn">Yes 💕</button>
+      <button id="noBtn">Really sure?? 😏</button>
+    </div>
+
+    <div class="love" id="message"></div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const message = document.getElementById("message");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 80 - 40;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    yesBtn.addEventListener("click", () => {
+      message.innerHTML = "YAY Keesha!! 💖 I knew you’d say yes 😍💍";
+    });
+  </script>
+
+</body>
+</html>
